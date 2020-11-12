@@ -1,5 +1,7 @@
 name:  Whatsapp Notify
 on:
+  workflow_dispatch:
+  push:
   issue_comment:
     types: created
   pull_request:
