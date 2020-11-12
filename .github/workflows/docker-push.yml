@@ -1,37 +1,18 @@
-name: CI to Docker hub 
-
+name: Publish Docker image
 on:
-
-  push:
-
-    branches: [ master ]
-
+  release:
+    types: [published]
 jobs:
-  
-  build:
-    
+  push_to_registry:
+    name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
-        
     steps:
-
-      -
-
-        name: Login to Docker Hub
-        uses: docker/login-action@v1 
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v1
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-      -
-        name: Build and push
-        id: docker_build
-        uses: docker/build-push-action@v2
-        with:
-          context: ./
-          file: ./Dockerfile
-          builder: ${{ steps.buildx.outputs.name }}
-          push: true
-          tags:  bengotch/simplewhale:latest
-
-      -
-        name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+          repository: khngjx/project2
+          tag_with_ref: true
