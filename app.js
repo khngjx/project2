@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 app.listen(8080, () => {
- console.log("Server run on port 3000");
+ console.log("Server running on the port 3000");
 });
 
 app.get("/", (req, res) => {
