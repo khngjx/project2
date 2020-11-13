@@ -5,9 +5,10 @@ A push event in project2 repository will trigger
   
 # What I still don't know
 
-* I still don't know how to build a dockerfile from scratch. 
+* I don't know how to build a dockerfile from scratch. 
 * I do not know what start.sh does. 
 * I still don't fully understand what these commands do "docker run -d -p 8080:8080 u1ih/nodejs-api" or "curl -i http://localhost:8080/fx"
+* I couldn't get the preset workflows actions to work
 
 
 # Steps and thought process
