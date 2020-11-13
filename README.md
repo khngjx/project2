@@ -3,7 +3,7 @@ A push event in project2 repository will trigger
   * Whatsapp notification
   * Build and push image to DockerHub
   
-# Steps and thought process (More like trial and error process...)
+# Steps and thought process 
   I created a workflow for each process by using seperate .YML file
   
   For Whatsapp notification, I followed the instructions at https://github.com/mdb571/wa-action. 
