@@ -1,7 +1,6 @@
 # Desired outcome
 A push event in project2 repository will trigger
   * Whatsapp notification
-  ![](https://github.com/khngjx/project2/blob/master/Untitled.png)
   * Build and push image to DockerHub
   
 # What I still don't know
